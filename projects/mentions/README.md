@@ -1,6 +1,8 @@
 
-# Angular @Mentions Component
-**@flxng/mentions**
+# Angular @Mentions Component based on @flxng/mentions
+**@dzik/mentions**
+
+
 
 Flexible, lightweight, easy-to-use, without external dependencies - Mentions component for Angular.
 
