@@ -269,7 +269,7 @@ export class TextInputAutocompleteComponent implements OnChanges, OnInit, OnDest
     }
   }
 
-  private hideMenu() {
+  public hideMenu() {
     if (!this.menuCtrl) {
       return;
     }
