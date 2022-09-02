@@ -1,5 +1,5 @@
 
-# Angular @Mentions Component based on @flxng/mentions
+# Angular @Mentions Component forked from @flxng/mentions with some fixes and improvements
 **@dzik/mentions**
 
 
@@ -16,12 +16,12 @@ https://flxng.codeeve.com/#/mentions
 ## Getting Started
 Installation:
 ```bash
-$ npm i @flxng/mentions
+$ npm i @dzik/mentions
 ```
 
 After importing the module the lib is ready to use:
 ```typescript
-import { MentionsModule } from '@flxng/mentions';
+import { MentionsModule } from '@dzik/mentions';
 
 @NgModule({
   imports: [MentionsModule],

@@ -1,6 +1,7 @@
 import {
   Component,
   EventEmitter,
+  HostListener,
   Input,
   NgZone,
   OnChanges,
@@ -172,6 +173,11 @@ export class TextInputAutocompleteComponent implements OnChanges, OnInit, OnDest
     this._eventListeners.forEach((unregister) => unregister());
   }
 
+  @HostListener('document:keydown.Escape', ['$event'])
+  onEscape(event: KeyboardEvent): void {
+    this.hideMenu();
+  }
+
   onKeydown(event: KeyboardEvent): void {
     const cursorPosition = this.textInputElement.selectionStart;
     const precedingChar = this.textInputElement.value.charAt(cursorPosition - 1);
@@ -269,7 +275,7 @@ export class TextInputAutocompleteComponent implements OnChanges, OnInit, OnDest
     }
   }
 
-  public hideMenu() {
+  private hideMenu() {
     if (!this.menuCtrl) {
       return;
     }
